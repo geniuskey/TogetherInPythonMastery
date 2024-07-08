@@ -1,0 +1,40 @@
+@startuml
+
+abstract class Mediator {
+    + notify(sender, event)
+}
+
+class ConcreteMediator {
+    - component1: Component1
+    - component2: Component2
+    + __init__(component1, component2)
+    + notify(sender, event)
+}
+
+Mediator <|-- ConcreteMediator
+
+class BaseComponent {
+    - mediator: Mediator
+    + __init__()
+    + set_mediator(mediator)
+}
+
+class Component1 {
+    + do_a()
+    + do_b()
+}
+
+class Component2 {
+    + do_c()
+    + do_d()
+}
+
+BaseComponent <|-- Component1
+BaseComponent <|-- Component2
+
+Component1 o-- Mediator
+Component2 o-- Mediator
+ConcreteMediator o-- Component1
+ConcreteMediator o-- Component2
+
+@enduml

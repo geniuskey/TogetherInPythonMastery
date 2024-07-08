@@ -1,0 +1,58 @@
+@startuml
+
+abstract class Chair {
+    {abstract} + sit_on()
+}
+
+class VictorianChair {
+    + sit_on()
+}
+
+class ModernChair {
+    + sit_on()
+}
+
+Chair <|-- VictorianChair
+Chair <|-- ModernChair
+
+abstract class Sofa {
+    {abstract} + lie_on()
+}
+
+class VictorianSofa {
+    + lie_on()
+}
+
+class ModernSofa {
+    + lie_on()
+}
+
+Sofa <|-- VictorianSofa
+Sofa <|-- ModernSofa
+
+abstract class FurnitureFactory {
+    {abstract} + create_chair()
+    {abstract} + create_sofa()
+}
+
+class VictorianFurnitureFactory {
+    + create_chair()
+    + create_sofa()
+}
+
+class ModernFurnitureFactory {
+    + create_chair()
+    + create_sofa()
+}
+
+FurnitureFactory <|-- VictorianFurnitureFactory
+FurnitureFactory <|-- ModernFurnitureFactory
+
+FurnitureFactory o-- Chair : create_chair()
+FurnitureFactory o-- Sofa : create_sofa()
+VictorianFurnitureFactory o-- VictorianChair : create_chair()
+VictorianFurnitureFactory o-- VictorianSofa : create_sofa()
+ModernFurnitureFactory o-- ModernChair : create_chair()
+ModernFurnitureFactory o-- ModernSofa : create_sofa()
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+
+class Flyweight {
+    - _intrinsic_state: str
+    + __init__(intrinsic_state)
+    + operation(extrinsic_state)
+}
+
+class FlyweightFactory {
+    - _flyweights: dict
+    + get_flyweight(key): Flyweight
+}
+
+FlyweightFactory o-- Flyweight
+
+@enduml

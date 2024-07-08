@@ -1,0 +1,26 @@
+@startuml
+
+abstract class State {
+    + handle(context)
+}
+
+class ConcreteStateA {
+    + handle(context)
+}
+
+class ConcreteStateB {
+    + handle(context)
+}
+
+State <|-- ConcreteStateA
+State <|-- ConcreteStateB
+
+class Context {
+    - state: State
+    + __init__(state)
+    + request()
+}
+
+Context o-- State
+
+@enduml

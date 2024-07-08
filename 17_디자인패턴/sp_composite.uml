@@ -1,0 +1,23 @@
+@startuml
+
+class Component {
+    + operation()
+}
+
+class Leaf {
+    + operation()
+}
+
+class Composite {
+    - _children: List<Component>
+    + __init__()
+    + add(component)
+    + remove(component)
+    + operation()
+}
+
+Component <|-- Leaf
+Component <|-- Composite
+Composite o-- Component : contains
+
+@enduml

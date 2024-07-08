@@ -1,0 +1,27 @@
+@startuml
+
+class Strategy {
+    + execute(a, b)
+}
+
+class ConcreteStrategyAdd {
+    + execute(a, b)
+}
+
+class ConcreteStrategySubtract {
+    + execute(a, b)
+}
+
+Strategy <|-- ConcreteStrategyAdd
+Strategy <|-- ConcreteStrategySubtract
+
+class Context {
+    - _strategy: Strategy
+    + __init__(strategy)
+    + set_strategy(strategy)
+    + execute_strategy(a, b)
+}
+
+Context o-- Strategy
+
+@enduml

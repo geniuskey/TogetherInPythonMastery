@@ -1,0 +1,26 @@
+@startuml
+
+class Context {
+    - expression: str
+    + __init__(expression)
+}
+
+abstract class AbstractExpression {
+    + interpret(context)
+}
+
+class TerminalExpression {
+    + interpret(context)
+}
+
+class NonTerminalExpression {
+    - expression: AbstractExpression
+    + __init__(expression)
+    + interpret(context)
+}
+
+AbstractExpression <|-- TerminalExpression
+AbstractExpression <|-- NonTerminalExpression
+NonTerminalExpression o-- AbstractExpression
+
+@enduml

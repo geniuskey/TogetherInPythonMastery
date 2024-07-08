@@ -1,0 +1,26 @@
+@startuml
+
+class Implementation {
+    + operation_impl()
+}
+
+class ConcreteImplementationA {
+    + operation_impl()
+}
+
+class ConcreteImplementationB {
+    + operation_impl()
+}
+
+Implementation <|-- ConcreteImplementationA
+Implementation <|-- ConcreteImplementationB
+
+class Abstraction {
+    - _implementation: Implementation
+    + __init__(implementation)
+    + operation()
+}
+
+Abstraction o-- Implementation
+
+@enduml

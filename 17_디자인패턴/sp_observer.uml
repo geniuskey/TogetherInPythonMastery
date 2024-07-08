@@ -1,0 +1,21 @@
+@startuml
+
+class Subject {
+    - _observers: List[Observer]
+    + __init__()
+    + add_observer(observer)
+    + notify_observers()
+}
+
+class Observer {
+    + update()
+}
+
+class ConcreteObserver {
+    + update()
+}
+
+Observer <|-- ConcreteObserver
+Subject o-- Observer
+
+@enduml

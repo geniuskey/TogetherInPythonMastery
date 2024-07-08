@@ -1,0 +1,28 @@
+@startuml
+
+abstract class Command {
+    + execute()
+}
+
+class ConcreteCommand {
+    - receiver: Receiver
+    + __init__(receiver)
+    + execute()
+}
+
+class Receiver {
+    + action()
+}
+
+class Invoker {
+    - _commands: List[Command]
+    + __init__()
+    + add_command(command)
+    + execute_commands()
+}
+
+Command <|-- ConcreteCommand
+ConcreteCommand o-- Receiver
+Invoker o-- Command
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+
+class SubsystemA {
+    + operation_a()
+}
+
+class SubsystemB {
+    + operation_b()
+}
+
+class Facade {
+    - _subsystem_a: SubsystemA
+    - _subsystem_b: SubsystemB
+    + __init__()
+    + operation()
+}
+
+Facade o-- SubsystemA
+Facade o-- SubsystemB
+
+@enduml

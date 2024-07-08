@@ -1,0 +1,20 @@
+@startuml
+
+class Target {
+    + request()
+}
+
+class Adaptee {
+    + specific_request()
+}
+
+class Adapter {
+    - adaptee: Adaptee
+    + __init__(adaptee)
+    + request()
+}
+
+Target <|-- Adapter
+Adapter o-- Adaptee
+
+@enduml

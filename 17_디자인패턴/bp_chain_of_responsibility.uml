@@ -1,0 +1,22 @@
+@startuml
+
+abstract class Handler {
+    - _next_handler: Handler
+    + __init__()
+    + set_next(handler): Handler
+    + handle(request)
+}
+
+class ConcreteHandlerA {
+    + handle(request)
+}
+
+class ConcreteHandlerB {
+    + handle(request)
+}
+
+Handler <|-- ConcreteHandlerA
+Handler <|-- ConcreteHandlerB
+Handler o-- Handler : next
+
+@enduml

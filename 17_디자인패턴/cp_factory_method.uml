@@ -1,0 +1,38 @@
+@startuml
+
+abstract class Product {
+    {abstract} + use()
+}
+
+class ConcreteProductA {
+    + use()
+}
+
+class ConcreteProductB {
+    + use()
+}
+
+Product <|-- ConcreteProductA
+Product <|-- ConcreteProductB
+
+abstract class Creator {
+    {abstract} + factory_method()
+    + create_product()
+}
+
+class ConcreteCreatorA {
+    + factory_method()
+}
+
+class ConcreteCreatorB {
+    + factory_method()
+}
+
+Creator <|-- ConcreteCreatorA
+Creator <|-- ConcreteCreatorB
+
+Creator o-- Product : factory_method()
+ConcreteCreatorA o-- ConcreteProductA : factory_method()
+ConcreteCreatorB o-- ConcreteProductB : factory_method()
+
+@enduml

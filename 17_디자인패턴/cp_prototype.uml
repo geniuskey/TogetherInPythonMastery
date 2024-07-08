@@ -1,0 +1,11 @@
+@startuml
+
+class Prototype {
+    - value: int
+    + __init__(value)
+    + clone()
+}
+
+Prototype --> Prototype : clone()
+
+@enduml

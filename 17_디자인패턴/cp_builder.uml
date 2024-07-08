@@ -1,0 +1,27 @@
+@startuml
+
+class Product {
+    - parts: List
+    + __init__()
+    + add(part)
+    + show()
+}
+
+class Builder {
+    - product: Product
+    + __init__()
+    + build_part_a()
+    + build_part_b()
+    + get_result()
+}
+
+class Director {
+    - builder: Builder
+    + __init__(builder)
+    + construct()
+}
+
+Director --> Builder
+Builder --> Product
+
+@enduml
