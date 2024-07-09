@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Decorator Pattern
 class Component:
     def operation(self):
         pass

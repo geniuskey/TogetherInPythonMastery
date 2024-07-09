@@ -1,3 +1,4 @@
+# 생성 패턴 (Creational Patterns) - Builder Pattern
 class Product:
     def __init__(self):
         self.parts = []

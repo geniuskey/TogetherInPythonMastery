@@ -1,3 +1,4 @@
+# 생성 패턴 (Creational Patterns) - Singleton Pattern
 class Singleton:
     _instance = None
 

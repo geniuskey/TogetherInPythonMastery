@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Builder Pattern
 class Implementation:
     def operation_impl(self):
         pass

@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Flyweight Pattern
 class Flyweight:
     def __init__(self, intrinsic_state):
         self._intrinsic_state = intrinsic_state

@@ -1,3 +1,4 @@
+# 생성 패턴 (Creational Patterns) - Factory method Pattern
 from abc import ABC, abstractmethod
 
 

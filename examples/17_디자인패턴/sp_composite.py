@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Composite Pattern
 class Component:
     def operation(self):
         pass

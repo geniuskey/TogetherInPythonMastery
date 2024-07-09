@@ -1,3 +1,4 @@
+# 생성 패턴 (Creational Patterns) - Prototype Pattern
 import copy
 
 

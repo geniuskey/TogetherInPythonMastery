@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Facade Pattern
 class SubsystemA:
     def operation_a(self):
         print("SubsystemA operation")

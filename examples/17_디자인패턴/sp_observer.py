@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Observer Pattern
 class Subject:
     def __init__(self):
         self._observers = []

@@ -1,3 +1,4 @@
+# 행위 패턴 (Behavioral Patterns) - Chain of Responsibility Pattern
 from abc import ABC, abstractmethod
 
 

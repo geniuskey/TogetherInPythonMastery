@@ -1,3 +1,4 @@
+# 행위 패턴 (Behavioral Patterns) - Mediator Pattern
 from abc import ABC, abstractmethod
 
 

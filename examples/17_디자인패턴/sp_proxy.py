@@ -1,3 +1,4 @@
+# 구조 패턴 (Structural Patterns) - Proxy Pattern
 class Subject:
     def request(self):
         pass

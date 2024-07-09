@@ -1,3 +1,4 @@
+# 행위 패턴 (Behavioral Patterns) - Strategy Pattern
 class Strategy:
     def execute(self, a, b):
         pass
